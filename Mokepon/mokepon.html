@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
     <title>MOKEPPON</title>
+    <script src="./mokepon.js"></script>
   </head>
   <body>
     <h1>Mokepón 🔥💧🌱</h1>
@@ -27,8 +27,8 @@
 
     <section id="seleccionar-ataque">
       <h2>Elige tu ataque:</h2>
-      <p>Tu mascota tiene <span> 3 </span> vidas</p>
-      <p>Tu mascota del enemigo tiene <span> 3 </span> vidas</p>
+      <p>Tu mascota <span id ="mascota-jugador"> 3 </span> tiene <span> 3 </span> vidas</p>
+      <p>La mascota <span id ="mascota-enemigo"> 3 </span> del enemigo tiene <span > 3 </span> vidas</p>
 
       <p>
         <button id="boton-fuego">Fuego 🔥</button>
@@ -38,15 +38,17 @@
     </section>
 
     <section id="mensajes">
-      <p>
+      <!-- <p>
         Tu mascota ataco con FUEGO , la mascota del enemigo ataco con
         Tierra-Ganaste 🥳
-      </p>
+      </p> -->
+
+      
     </section>
 
     <section id="reiniciar">
       <button id="boton-reiniciar">Reiniciar</button>
     </section>
-    <script src="./mokepon.js"></script>
+    
   </body>
 </html>
