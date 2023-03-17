@@ -26,8 +26,6 @@ function iniciarJuego(){
 }
 
 function seleccionarMascotaJugador() {
-  debugger
-
 
 let inputHipodogue = document.getElementById("hipodogue");
 let inputCapipepo = document.getElementById("capipepo");
@@ -45,15 +43,17 @@ if (inputHipodogue.checked) {
   seleccionarMascotaEnemigo();
 } else if (inputCapipepo.checked) {
   alert("Seleccionaste a Capipepo");
-  spanMascotaJugador.innerHTML = "Capipepo";  let sectionSeleccionarMascota =  document.getElementById('seleccionar-mascota')
+  spanMascotaJugador.innerHTML = "Capipepo";  
+  let sectionSeleccionarMascota =  document.getElementById('seleccionar-mascota')
   sectionSeleccionarMascota.style.display = 'none'
 
   let sectionSeleccionarAtaque =  document.getElementById('seleccionar-ataque')
- sectionSeleccionarAtaque.style.display = 'block'
+  sectionSeleccionarAtaque.style.display = 'block'
   seleccionarMascotaEnemigo();
 } else if (inputRatigueya.checked) {
   alert("Seleccionaste a Ratigueya");
-  spanMascotaJugador.innerHTML = "Ratigueya";  let sectionSeleccionarMascota =  document.getElementById('seleccionar-mascota')
+  spanMascotaJugador.innerHTML = "Ratigueya";  
+  let sectionSeleccionarMascota =  document.getElementById('seleccionar-mascota')
   sectionSeleccionarMascota.style.display = 'none'
 
   let sectionSeleccionarAtaque =  document.getElementById('seleccionar-ataque')
@@ -138,6 +138,7 @@ function combate() {
 revisarVidas()
 
 }
+
 function revisarVidas (){
 if (vidasEnemigo == 0 ){
   //ganamos 
