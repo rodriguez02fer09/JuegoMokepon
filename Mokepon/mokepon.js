@@ -285,11 +285,11 @@ function crearMensaje(resultado) {
 function crearMensajeFinal(resultadoFinal) {
     
     
-  sectionMensajes.innerHTML = resultadoFinal
+    sectionMensajes.innerHTML = resultadoFinal
 
 
-  
-  sectionReiniciar.style.display = 'block'
+    
+    sectionReiniciar.style.display = 'block'
 }
 
 function reiniciarJuego() {
