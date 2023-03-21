@@ -190,17 +190,19 @@ function seleccionarMascotaEnemigo() {
 }
 
 function ataqueAleatorioEnemigo() {
-  let ataqueAleatorio = aleatorio(0, ataquesMokeponEnemigo.length - 1);
-  if (ataqueAleatorio == 0 || ataqueAleatorio == 1) {
-      ataqueEnemigo.push('FUEGO');
+  let ataqueAleatorio = aleatorio(0,ataquesMokeponEnemigo.length -1)
+  
+  if (ataqueAleatorio == 0 || ataqueAleatorio ==1) {
+      ataqueEnemigo.push('FUEGO')
   } else if (ataqueAleatorio == 3 || ataqueAleatorio == 4) {
-      ataqueEnemigo.push('AGUA');
+      ataqueEnemigo.push('AGUA')
   } else {
-      ataqueEnemigo.push('TIERRA');
+      ataqueEnemigo.push('TIERRA')
   }
-  console.log(ataqueEnemigo);
-  combate();
+  console.log(ataqueEnemigo)
+  iniciarPelea()
 }
+
 
 
 function iniciarPelea (){
@@ -268,15 +270,15 @@ function revisarVidas() {
 function crearMensaje(resultado) {
     
     
-  let nuevoAtaqueDelJugador = document.createElement('p')
-  let nuevoAtaqueDelEnemigo = document.createElement('p')
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-  sectionMensajes.innerHTML = resultado
-  nuevoAtaqueDelJugador.innerHTML = indexAtaqueJugador
-  nuevoAtaqueDelEnemigo.innerHTML = indexAtaqueEnemigo
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = indexAtaqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = indexAtaqueEnemigo
 
-  ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
-  ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 
@@ -290,10 +292,10 @@ function crearMensajeFinal(resultadoFinal) {
   sectionReiniciar.style.display = 'block'
 }
 
-
 function reiniciarJuego() {
   location.reload()
 }
+
 
 function aleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
