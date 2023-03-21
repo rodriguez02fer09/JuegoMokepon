@@ -97,22 +97,20 @@ function ataqueTierra() {
 }
 
 function ataqueAleatorioEnemigo() {
-    let ataqueAleatorio = aleatorio(1,3)
-    
-    if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'FUEGO'
-    } else if (ataqueAleatorio == 2) {
-        ataqueEnemigo = 'AGUA'
-    } else {
-        ataqueEnemigo = 'TIERRA'
-    }
+  let ataqueAleatorio = aleatorio(1,3)
+  
+  if (ataqueAleatorio == 1) {
+      ataqueEnemigo = 'FUEGO'
+  } else if (ataqueAleatorio == 2) {
+      ataqueEnemigo = 'AGUA'
+  } else {
+      ataqueEnemigo = 'TIERRA'
+  }
 
-    combate()
+  combate()
 }
 
 function combate() {
-
-
   let spanVidasJugador = document.getElementById('vidas-jugador')
   let spanVidasEnemigo = document.getElementById('vidas-enemigo')
   
@@ -135,8 +133,8 @@ function combate() {
       vidasJugador--
       spanVidasJugador.innerHTML = vidasJugador
   }
-revisarVidas()
 
+  revisarVidas()
 }
 
 function revisarVidas (){
@@ -151,27 +149,32 @@ if (vidasEnemigo == 0 ){
 }
 
 function crearMensaje(resultado) {
-  let sectionMensajes = document.getElementById("mensajes");
-  let parrafo = document.createElement("p");
-  parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", las mascota del enemigo atacó con " + ataqueEnemigo + "- " +
-    resultado;
-  sectionMensajes.appendChild(parrafo);
+  let sectionMensajes = document.getElementById('resultado')
+  let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+  let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
+  
+  let nuevoAtaqueDelJugador = document.createElement('p')
+  let nuevoAtaqueDelEnemigo = document.createElement('p')
+
+  sectionMensajes.innerHTML = resultado
+  nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+  nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+  ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+  ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 function crearMensajeFinal(resultadoFinal) {
-  let sectionMensajes = document.getElementById("mensajes");
-
-  let parrafo = document.createElement("p");
-  parrafo.innerHTML = resultadoFinal
-    
-  sectionMensajes.appendChild(parrafo);
-
-  let botonFuego = document.getElementById("boton-fuego");
-  botonFuego.disabled = true
-  let botonAgua = document.getElementById("boton-agua");
-  botonAgua.disabled = true
-  let botonTierra = document.getElementById("boton-tierra");
-  botonTierra.disabled = true
+  let sectionMensajes = document.getElementById('resultado')
   
+  sectionMensajes.innerHTML = resultadoFinal
+
+  let botonFuego = document.getElementById('boton-fuego')
+  botonFuego.disabled = true
+  let botonAgua = document.getElementById('boton-agua')
+  botonAgua.disabled = true
+  let botonTierra = document.getElementById('boton-tierra')
+  botonTierra.disabled = true
+
   let sectionReiniciar = document.getElementById('reiniciar')
   sectionReiniciar.style.display = 'block'
 }
